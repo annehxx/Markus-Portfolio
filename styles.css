@@ -1,0 +1,680 @@
+/* -------------- Imports --------------  */
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+/* Scrolllbar (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* -------------- Variables --------------  */
+:root {
+  /* Primary background color */
+  --dark-bg: #050208;
+
+  /* Accent colors */
+  --bright-purple: #863cff;
+  --yellow: #ebf056;
+
+  /* Text colors */
+  --light-text: #ffffff;
+  --dark-text: #000000;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  color: var(--light-text);
+  background-color: var(--dark-bg);
+  height: 100vh;
+}
+
+/* -------------- Menu Bar --------------  */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 10;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 50px;
+  height: 70px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  position: relative;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 10px 15px;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+/* Left to middle underline */
+nav a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: var(--bright-purple);
+  transition: width 0.3s ease-in-out;
+}
+
+/* Top-right to middle underline */
+nav a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0%;
+  height: 2px;
+  background: var(--bright-purple);
+  transition: width 0.3s ease-in-out;
+}
+
+/* Hover effect */
+nav a:hover::before {
+  width: 50%;
+}
+
+nav a:hover::after {
+  width: 50%;
+}
+
+/* -------------- Landing Page -------------- */
+
+.landing {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* ---- Left Content ---- */
+
+.left-content {
+  flex: 1;
+  max-width: 600px;
+  padding: 50px;
+}
+
+.intro-text {
+  color: var(--bright-purple);
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+.left-content h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #dcdce0;
+  margin-bottom: 10px;
+}
+
+.left-content h2 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #a9a9b3;
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: 1.3rem;
+  color: #cccccc;
+  max-width: 500px;
+}
+
+.contact-button {
+  display: inline-block;
+  padding: 12px 25px;
+  border: 2px solid var(--bright-purple);
+  color: var(--bright-purple);
+  font-size: 1.2rem;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.contact-button:hover {
+  background: var(--bright-purple);
+  color: #000;
+}
+
+/* Profilbild mit lila Glühumrandung */
+.profile-picture {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  margin-bottom: 30px;
+  box-shadow: 0 0 30px rgba(134, 60, 255, 0.8);
+  transition: box-shadow 0.3s ease;
+}
+
+.profile-picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Hover-Effekt für Glühen */
+.profile-picture:hover {
+  box-shadow: 0 0 40px rgba(134, 60, 255, 1);
+}
+
+/* ---- Right Content ---- */
+
+.right-content {
+  flex: 1;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+span {
+  font-family: "Sapce Mono";
+  color: #e67e22;
+}
+
+spline-viewer {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* -------------- Timeline --------------  */
+.timeline-section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #050208; /* Dunkler Hintergrund */
+  color: white;
+  padding: 50px;
+}
+
+/* Linke Seite (Spline) */
+.timeline-left-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#astronaut {
+  width: 90%;
+  height: 500px;
+  border-radius: 10px;
+}
+
+/* Rechte Seite (Timeline) */
+.timeline-right-content {
+  flex: 1;
+  padding: 20px;
+}
+
+.timeline-right-content h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: var(--bright-purple);
+}
+
+/* Timeline Styling */
+.timeline {
+  position: relative;
+  width: 80%;
+  padding: 20px 0;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: 0;
+  width: 5px;
+  height: 100%;
+  background: var(--bright-purple);
+}
+
+/* Timeline Items */
+.timeline-item {
+  position: relative;
+  padding: 20px 0 20px 50px;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: 13px;
+  top: 30px;
+  width: 20px;
+  height: 20px;
+  background: var(--bright-purple);
+  border-radius: 50%;
+}
+
+.timeline-content {
+  background: rgba(255, 255, 255, 0.1); /* Transparenter weißer Hintergrund */
+  backdrop-filter: blur(10px); /* Unschärfe-Effekt */
+  -webkit-backdrop-filter: blur(10px);
+  padding: 15px;
+  border-radius: 12px;
+  display: inline-block;
+  max-width: 300px;
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Leichte Umrandung */
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1); /* Weicher Schatten */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover-Effekt für bessere Interaktivität */
+.timeline-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(179, 136, 255, 0.3);
+}
+
+/* -------------- Skills Section -------------- */
+.skills-section {
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  padding: 50px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Position the background image in the section */
+.skills-background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.75;
+  z-index: -1;
+}
+
+.skills-section h2 {
+  font-size: 3rem;
+  color: var(--bright-purple);
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.honeycomb-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 30px;
+  justify-items: center;
+  max-width: 1200px;
+  position: relative;
+}
+
+/* Honeycomb Cell */
+.honeycomb {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  cursor: pointer;
+}
+
+/* Inside Honeycomb Cell */
+.honeycomb-cell {
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s ease;
+}
+
+.honeycomb-cell i {
+  font-size: 3rem;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+/* Hover Effects */
+.honeycomb-cell:hover {
+  background-color: var(--bright-purple);
+  transform: scale(1.2); /* Slight zoom effect */
+  box-shadow: 0 4px 15px rgba(134, 60, 255, 0.5);
+}
+
+.honeycomb-cell:hover i {
+  color: #000;
+}
+
+/* -------------------- Remove the odd/even staggered margins -------------------- */
+.honeycomb-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Standardize grid layout */
+  grid-gap: 30px;
+  justify-items: center;
+  max-width: 1200px;
+  position: relative;
+  justify-content: center; /* Center align the grid */
+  align-items: center;
+}
+
+/* -------------------- Versetzte Zellen für erste Reihe -------------------- */
+.honeycomb:nth-child(odd):nth-child(-n + 5) {
+  margin-top: 20px; /* Zellen der ersten Reihe (ungerade) nach unten verschieben */
+}
+
+.honeycomb:nth-child(even):nth-child(-n + 5) {
+  margin-top: -10px; /* Zellen der ersten Reihe (gerade) nach oben verschieben */
+}
+
+/* -------------------- Versetzte Zellen für zweite Reihe -------------------- */
+.honeycomb:nth-child(odd):nth-child(n + 6) {
+  margin-top: -10px; /* Zellen der zweiten Reihe (ungerade) nach oben verschieben */
+}
+
+.honeycomb:nth-child(even):nth-child(n + 6) {
+  margin-top: 20px; /* Zellen der zweiten Reihe (gerade) nach unten verschieben */
+}
+
+/* -------------- Hobbies Section -------------- */
+.hobbies-section {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #050208;
+  color: white;
+  padding: 50px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hobbies-section h2 {
+  font-size: 3rem;
+  color: var(--bright-purple);
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+/* Hobbies Container */
+.hobbies-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+/* Individual Hobby Cards */
+.hobby-card {
+  width: 250px;
+  height: 350px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 30px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  cursor: pointer;
+}
+
+.hobby-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(179, 136, 255, 0.3);
+  background: var(--bright-purple);
+}
+
+.card-icon {
+  font-size: 3rem;
+  color: #fff;
+  margin-bottom: 20px;
+  transition: color 0.3s ease;
+}
+
+.hobby-card:hover .card-icon {
+  color: #000; /* Icon color changes when card is hovered */
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.card-description {
+  font-size: 1rem;
+  color: white;
+}
+
+/* -------------- Projects Section -------------- */
+.projects-section {
+  padding: 50px;
+  color: white;
+}
+
+.projects-section h2 {
+  font-size: 3rem;
+  color: var(--bright-purple);
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.projects-container {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+.project-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column-reverse;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+.project-text {
+  flex: 1;
+  margin-left: 20px;
+}
+
+.project-description {
+  font-size: 1.1rem;
+  color: #dcdce0;
+}
+
+.project-image {
+  flex: 1;
+  max-width: 500px;
+  height: auto;
+}
+
+.project-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.separator {
+  height: 2px;
+  background-color: #9b4dca; /* Lila Trennstrich */
+  margin: 20px 0;
+}
+
+/* -------------- Tasks Section -------------- */
+.tasks-section {
+  padding: 50px;
+  background: linear-gradient(to bottom, #050208, #19072c);
+  color: #fff;
+}
+
+.tasks-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--light-text);
+  margin-bottom: 30px;
+}
+
+.tasks-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  justify-items: center;
+  align-items: start;
+}
+
+.sticky-note {
+  border-radius: 8px;
+  padding: 20px;
+  width: 220px;
+  height: 200px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: transform 0.2s ease-in-out;
+  z-index: 1;
+  background-image: url("images/sticky note.png");
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+}
+
+.sticky-note h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  margin-left: 30px;
+  color: black;
+}
+
+.sticky-note p {
+  font-size: 1rem;
+  margin-left: 30px;
+  color: #444;
+}
+
+/* Sticky Effect */
+.sticky-note:nth-child(odd) {
+  transform: rotate(-5deg);
+}
+
+.sticky-note:nth-child(even) {
+  transform: rotate(5deg);
+}
+
+.sticky-note:hover {
+  transform: scale(1.05); /* Vergrößerung beim Hover */
+}
+
+/* Sticky Effect: Fixiere die Notizen beim Scrollen */
+.sticky-note {
+  position: sticky;
+  top: 30px;
+}
+
+.pin {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.task-buttons {
+  display: none; /* Standardmäßig ausblenden */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.task-button {
+  display: inline-block;
+  border: 2px solid var(--dark-bg);
+  color: var(--dark-bg);
+  text-decoration: none;
+  padding: 10px 15px;
+  margin: 5px;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.task-button:hover {
+  background: var(--bright-purple);
+}
+
+/* Effekt: Text ausblenden, Buttons einblenden */
+.sticky-note:hover h3,
+.sticky-note:hover p {
+  display: none;
+}
+
+.sticky-note:hover .task-buttons {
+  display: block;
+}

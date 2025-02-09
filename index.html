@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Markus Heinrich</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Header with Menu -->
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#timeline">Career</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#hobbies">Hobbies</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#tasks">Tasks</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- First section: Landing Page -->
+    <section class="landing" id="about">
+      <div class="left-content">
+        <!-- Profilbild -->
+        <div class="profile-picture">
+          <img src="images/profile_picture.png" alt="Markus Heinrich" />
+        </div>
+        <p class="intro-text">Hi, my name is</p>
+        <h1>Markus Heinrich</h1>
+        <h2>Building the web, better.</h2>
+        <p class="description">
+          Innovating the web with purpose and precision. As a full-stack
+          engineer, I create accessible, user-friendly digital experiences that
+          leave a lasting impact.
+        </p>
+        <a href="#contact" class="contact-button">Explore</a>
+      </div>
+
+      <div class="right-content">
+        <spline-viewer
+          url="https://prod.spline.design/eAtfz-rygkxIjO8R/scene.splinecode"
+        ></spline-viewer>
+      </div>
+    </section>
+
+    <!-- Second section: Timeline -->
+
+    <section id="timeline" class="timeline-section">
+      <div class="timeline-left-content">
+        <spline-viewer
+          id="astronaut"
+          loading-anim-type="spinner-small-dark"
+          url="https://prod.spline.design/v5ivzdI83GfQrfN5/scene.splinecode"
+        ></spline-viewer>
+      </div>
+
+      <div class="timeline-right-content">
+        <h2>Curriculum vitae</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h3>2015 - 2019</h3>
+              <p>B.A. Japanologie, Uni Leipzig</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h3>2017 - 2018</h3>
+              <p>Auslandsjahr in Japan</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h3>2019 - 2022</h3>
+              <p>M.A. Japanologie, Uni Leipzig</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h3>2022 - Today</h3>
+              <p>B.Sc Informatik, HTWK Leipzig</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Third Section: Skills -->
+    <section id="skills" class="skills-section">
+      <img
+        src="images/background-planets.jpg"
+        alt="Background Planets"
+        class="skills-background-image"
+      />
+      <h2>Skills</h2>
+      <div class="honeycomb-container">
+        <div class="honeycomb">
+          <div class="honeycomb-cell">
+            <i class="fab fa-html5"></i>
+          </div>
+        </div>
+        <div class="honeycomb">
+          <div class="honeycomb-cell">
+            <i class="fab fa-css3-alt"></i>
+          </div>
+        </div>
+        <div class="honeycomb">
+          <div class="honeycomb-cell">
+            <i class="fab fa-js"></i>
+          </div>
+        </div>
+        <div class="honeycomb">
+          <div class="honeycomb-cell">
+            <i class="fab fa-php"></i>
+          </div>
+        </div>
+        <div class="honeycomb">
+          <div class="honeycomb-cell">
+            <i class="fa fa-database"></i>
+          </div>
+        </div>
+        <div class="honeycomb">
+          <div class="honeycomb-cell">
+            <i class="fab fa-java"></i>
+          </div>
+        </div>
+        <div class="honeycomb">
+          <div class="honeycomb-cell">
+            <i class="fab fa-github"></i>
+          </div>
+        </div>
+        <div class="honeycomb">
+          <div class="honeycomb-cell">
+            <i class="fab fa-docker"></i>
+          </div>
+        </div>
+        <div class="honeycomb">
+          <div class="honeycomb-cell">
+            <i class="fa fa-cloud"></i>
+          </div>
+        </div>
+        <div class="honeycomb">
+          <div class="honeycomb-cell">
+            <i class="fab fa-raspberry-pi"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fourth Section: Hobbies -->
+    <section id="hobbies" class="hobbies-section">
+      <h2>Hobbies</h2>
+      <div class="hobbies-container">
+        <!-- Hobby Card 1 -->
+        <div class="hobby-card">
+          <div class="card-icon">
+            <i class="fa fa-seedling"></i>
+          </div>
+          <div class="card-title">Gartenarbeit</div>
+          <p class="card-description">Hier steht dein Text zu Hobby 1</p>
+        </div>
+
+        <!-- Hobby Card 2 -->
+        <div class="hobby-card">
+          <div class="card-icon">
+            <i class="fa fa-utensils"></i>
+          </div>
+          <div class="card-title">Hobby 2</div>
+          <p class="card-description">Hier steht dein Text zu Hobby 2</p>
+        </div>
+
+        <!-- Hobby Card 3 -->
+        <div class="hobby-card">
+          <div class="card-icon">
+            <i class="fa fa-paw"></i>
+          </div>
+          <div class="card-title">Hobby 3</div>
+          <p class="card-description">Hier steht dein Text zu Hobby 3</p>
+        </div>
+
+        <!-- Hobby Card 4 -->
+        <div class="hobby-card">
+          <div class="card-icon">
+            <i class="fa fa-book"></i>
+          </div>
+          <div class="card-title">Hobby 4</div>
+          <p class="card-description">Hier steht dein Text zu Hobby 4</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fifth Section: Projects -->
+    <section class="projects-section" id="projects">
+      <h2>Projects</h2>
+      <div class="projects-container">
+        <!-- Project 1 -->
+        <div class="project-item">
+          <div class="project-image">
+            <img src="images/project-1.png" alt="Projekt 1" />
+          </div>
+          <div class="project-text">
+            <h3>Webscraper</h3>
+            <p class="project-description">
+              Als Teil des Studiums habe ich innerhalb eines einjährigen
+              Softwareprojekts mit an einem Webscraper gearbeitet. Ziel war es
+              Pressemitteilungen sowie Veranstaltungen von verschiedenen
+              Webseiten zu scrapen und auf der zentralen Seite des Leipziger
+              Science Network zu bündeln. Hierbei konnte ich nicht nur meine
+              Kenntnisse in der Webentwicklung mit der Sprache PhP vertiefen,
+              sondern auch im Umgang mit Datenbanksprachen wie SQL und den
+              Umgang mit künstlicher Intelligenz. Durch die Nutzung von Docker
+              zur Containerisierung der Anwendung konnte ich zudem erste
+              Erfahrungen im Bereich der DevOps sammeln.
+            </p>
+          </div>
+        </div>
+        <div class="separator"></div>
+
+        <!-- Project 2 -->
+        <div class="project-item">
+          <div class="project-image">
+            <img src="images/project-2.png" alt="Projekt 2" />
+          </div>
+          <div class="project-text">
+            <h3>Binär Uhr</h3>
+            <p class="project-description">
+              Innerhalb der ersten zwei Semester meines Informatikbachelors habe
+              ich eine Binär-Uhr von Grund auf selbst entwickelt. So bestanden
+              die ersten Schritte mit der Auswahl der passenden Bauteile und der
+              Erstellung eines Schaltplans. Nach dem Verlöten der einzelnen
+              Bauteile habe ich die Uhr in der Sprache C programmiert. Im Zuge
+              dieses Projeks habe ich wertvolle Erfahrungen im Bereich der
+              hardwarenahen Programmierung sowie die Konzeptionierung eigener
+              Hardware.
+            </p>
+          </div>
+        </div>
+        <div class="separator"></div>
+
+        <!-- Project 3 -->
+        <div class="project-item">
+          <div class="project-image">
+            <img src="images/project-3.png" alt="Projekt 3" />
+          </div>
+          <div class="project-text">
+            <h3>Meal-Rating-App</h3>
+            <p class="project-description">
+              Derzeit arbeite ich an einer App, die es dem Nutzer ermöglichen
+              soll, Mahlzeiten zu bewerten und zu speichern. Hierbei nutze ich
+              die Programmiersprache Kotlin zur Entwicklung der App und den
+              Clouddienst Azure zur Speicherung der Daten. Durch die Nutzung von
+              Azure konnte ich meine Kenntnisse im Bereich der
+              Cloud-Technologien vertiefen und erste Erfahrungen im Bereich der
+              App-Entwicklung sammeln.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sixth Section: Tasks -->
+    <section class="tasks-section" id="tasks">
+      <h2>Tasks</h2>
+      <div class="tasks-container">
+        <div class="sticky-note">
+          <div class="pin"></div>
+          <h3>Aufgabe 1</h3>
+          <div class="task-buttons">
+            <a href="aufgabe_a.html" class="task-button">A</a>
+            <a href="aufgabe_b.html" class="task-button">B</a>
+            <a href="aufgabe_c.html" class="task-button">C</a>
+          </div>
+          <p>
+            Diese Aufgabe könnte sich um das Erstellen eines neuen Features
+            drehen.
+          </p>
+        </div>
+        <div class="sticky-note">
+          <div class="pin"></div>
+          <div class="task-buttons">
+            <a href="aufgabe_a.html" class="task-button">A</a>
+            <a href="aufgabe_b.html" class="task-button">B</a>
+            <a href="aufgabe_c.html" class="task-button">C</a>
+          </div>
+          <h3>Aufgabe 2</h3>
+          <p>
+            Hier geht es darum, eine Analyse zu machen oder ein Projekt zu
+            dokumentieren.
+          </p>
+        </div>
+        <div class="sticky-note">
+          <div class="pin"></div>
+          <div class="task-buttons">
+            <a href="aufgabe_a.html" class="task-button">A</a>
+            <a href="aufgabe_b.html" class="task-button">B</a>
+            <a href="aufgabe_c.html" class="task-button">C</a>
+          </div>
+          <h3>Aufgabe 3</h3>
+          <p>Arbeiten an der Optimierung der Performance einer Anwendung.</p>
+        </div>
+        <div class="sticky-note">
+          <div class="pin"></div>
+          <div class="task-buttons">
+            <a href="aufgabe_a.html" class="task-button">A</a>
+            <a href="aufgabe_b.html" class="task-button">B</a>
+            <a href="aufgabe_c.html" class="task-button">C</a>
+          </div>
+          <h3>Aufgabe 4</h3>
+          <p>
+            Code-Review und Feedback zu erhalten für ein bereits abgeschlossenen
+            Projekt.
+          </p>
+        </div>
+        <div class="sticky-note">
+          <div class="pin"></div>
+          <div class="task-buttons">
+            <a href="aufgabe_a.html" class="task-button">A</a>
+            <a href="aufgabe_b.html" class="task-button">B</a>
+            <a href="aufgabe_c.html" class="task-button">C</a>
+          </div>
+          <h3>Aufgabe 4</h3>
+          <p>
+            Code-Review und Feedback zu erhalten für ein bereits abgeschlossenen
+            Projekt.
+          </p>
+        </div>
+        <div class="sticky-note">
+          <div class="pin"></div>
+          <div class="task-buttons">
+            <a href="aufgabe_a.html" class="task-button">A</a>
+            <a href="aufgabe_b.html" class="task-button">B</a>
+            <a href="aufgabe_c.html" class="task-button">C</a>
+          </div>
+          <h3>Aufgabe 4</h3>
+          <p>
+            Code-Review und Feedback zu erhalten für ein bereits abgeschlossenen
+            Projekt.
+          </p>
+        </div>
+        <div class="sticky-note">
+          <div class="pin"></div>
+          <div class="task-buttons">
+            <a href="aufgabe_a.html" class="task-button">A</a>
+            <a href="aufgabe_b.html" class="task-button">B</a>
+            <a href="aufgabe_c.html" class="task-button">C</a>
+          </div>
+          <h3>Aufgabe 4</h3>
+          <p>
+            Code-Review und Feedback zu erhalten für ein bereits abgeschlossenen
+            Projekt.
+          </p>
+        </div>
+        <div class="sticky-note">
+          <div class="pin"></div>
+          <div class="task-buttons">
+            <a href="tasks/aufgabe1_a.html" class="task-button">A</a>
+            <a href="aufgabe_b.html" class="task-button">B</a>
+            <a href="aufgabe_c.html" class="task-button">C</a>
+          </div>
+          <h3>Aufgabe 4</h3>
+          <p>
+            Code-Review und Feedback zu erhalten für ein bereits abgeschlossenen
+            Projekt.
+          </p>
+        </div>
+        <div class="sticky-note">
+          <div class="pin"></div>
+          <div class="task-buttons">
+            <a href="aufgabe_a.html" class="task-button">A</a>
+            <a href="aufgabe_b.html" class="task-button">B</a>
+            <a href="aufgabe_c.html" class="task-button">C</a>
+          </div>
+          <h3>Aufgabe 4</h3>
+          <p>
+            Code-Review und Feedback zu erhalten für ein bereits abgeschlossenen
+            Projekt.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <script
+      type="module"
+      src="https://unpkg.com/@splinetool/viewer@1.0.48/build/spline-viewer.js"
+    ></script>
+    <script src="app.js"></script>
+    <script
+      src="https://kit.fontawesome.com/0ae3828fd1.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
